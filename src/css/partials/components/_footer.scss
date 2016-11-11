@@ -1,3 +1,29 @@
 .footer {
-  margin-top: 50px;
+  margin-top: 35px;
+
+  &__list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  &__link {
+    text-decoration: underline;
+    color: #939393;
+  }
+  &__item {
+    padding-top: 10px;
+  }
+  &__contact {
+    color: #939393;
+    padding-top: 15px;
+    text-align: right;
+  }
+  &__phone {
+    font-size: 20px;
+    color: #939399;
+    text-decoration: none;
+  }
+  &__adress {
+    font-size: 12px;
+    margin-top: 0;
+  }
 }
