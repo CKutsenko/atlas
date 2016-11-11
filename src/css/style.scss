@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+// 3rd party
+@import "partials/abstracts/variables";
+@import "partials/abstracts/bootstrap-flex";
+@import "vendor/normalize";
+@import "vendor/mq";
+// @import "vendor/slick";
+
+// Abstracts
+
+@import "partials/abstracts/mixins";
+@import "partials/abstracts/png-sprite";
+
+// Base
+@import "partials/base/template";
+
+
+
+@import "partials/components/header";
+@import "partials/components/footer";
+
+

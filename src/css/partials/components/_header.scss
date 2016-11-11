@@ -1,0 +1,93 @@
+.header {
+  padding: 35px 0 30px;
+  &__logo {
+    width: 220px;
+    height: 50px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit:contain;
+    }
+  }
+  &__contact {
+    color: #939393;
+  }
+  &__phone {
+    font-size: 20px;
+    color: #939399;
+    text-decoration: none;
+  }
+  &__adress {
+    font-size: 12px;
+    margin-top: 0;
+  }
+  &__search-wrapper,
+  &__btn-wrapper {
+    flex: 0 0 50%;
+    align-items: flex-end;
+  }
+  &__btn-wrapper {
+    text-align: right;
+  }
+  &__input {
+    // width: 160px;
+    width: 85%;
+    padding: 8px 0 8px 40px;
+    outline: none;
+  }
+  &__form {
+    position: relative;
+    img {
+      position: absolute;
+      left: 7px;
+      top: 10px;
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    width: 200px;
+    background-color: #e7a91a;
+    font-size: 12px;
+    padding: 10px 40px 10px 0;
+    color: #fff;
+    border-radius: 3px;
+    position: relative;
+    transition: .3;
+    &:before {
+      position: absolute;
+      content: '';
+      @include sprite($s-mail);
+      left: 12px;
+      bottom: 12px;
+    }
+    &:hover {
+      background-color: #c4911a;
+    }
+  }
+}
+
+.nav {
+  &__list {
+    list-style-type: none;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0;
+    margin-left: 0px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    background-color: #65656e;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+  }
+  &__link {
+    color: #fff;
+    padding: 25px 0;
+    display: block;
+    border-right: 1px solid #fff;
+  }
+}
