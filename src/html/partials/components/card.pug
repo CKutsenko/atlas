@@ -1,3 +1,5 @@
+include ../abstracts/mixins/_form.pug
+include ../abstracts/mixins/_catalogItem.pug
 include ../abstracts/bemto/bemto.pug
 
 //Card
@@ -56,3 +58,7 @@ include ../abstracts/bemto/bemto.pug
         span По запросу
       +e.P.catalog Есть в наличии
       +e.A.btn(href="#") Купить
+      +e.overlay
+        +b.FORM.popup
+          +e.bgr
+          +form(order)

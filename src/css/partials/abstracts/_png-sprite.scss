@@ -66,6 +66,28 @@ $s-mail-total-width: 222px;
 $s-mail-total-height: 103px;
 $s-mail-image: '../img/png-sprite.png';
 $s-mail: (134px, 47px, -134px, -47px, 21px, 13px, 222px, 103px, '../img/png-sprite.png', 's-mail', );
+$s-next-name: 's-next';
+$s-next-x: 155px;
+$s-next-y: 47px;
+$s-next-offset-x: -155px;
+$s-next-offset-y: -47px;
+$s-next-width: 4px;
+$s-next-height: 7px;
+$s-next-total-width: 222px;
+$s-next-total-height: 103px;
+$s-next-image: '../img/png-sprite.png';
+$s-next: (155px, 47px, -155px, -47px, 4px, 7px, 222px, 103px, '../img/png-sprite.png', 's-next', );
+$s-prev-name: 's-prev';
+$s-prev-x: 159px;
+$s-prev-y: 47px;
+$s-prev-offset-x: -159px;
+$s-prev-offset-y: -47px;
+$s-prev-width: 4px;
+$s-prev-height: 7px;
+$s-prev-total-width: 222px;
+$s-prev-total-height: 103px;
+$s-prev-image: '../img/png-sprite.png';
+$s-prev: (159px, 47px, -159px, -47px, 4px, 7px, 222px, 103px, '../img/png-sprite.png', 's-prev', );
 $s-search-name: 's-search';
 $s-search-x: 111px;
 $s-search-y: 47px;
@@ -102,7 +124,7 @@ $s-stock-icon: (30px, 47px, -30px, -47px, 30px, 30px, 222px, 103px, '../img/png-
 $spritesheet-width: 222px;
 $spritesheet-height: 103px;
 $spritesheet-image: '../img/png-sprite.png';
-$spritesheet-sprites: ($s-cart, $s-hamburger-close, $s-hamburger, $s-logotype, $s-mail, $s-search, $s-services-icon, $s-stock-icon, );
+$spritesheet-sprites: ($s-cart, $s-hamburger-close, $s-hamburger, $s-logotype, $s-mail, $s-next, $s-prev, $s-search, $s-services-icon, $s-stock-icon, );
 $spritesheet: (222px, 103px, '../img/png-sprite.png', $spritesheet-sprites, );
 
 /*

@@ -1,3 +1,4 @@
+include ../abstracts/mixins/_form.pug
 include ../abstracts/bemto/bemto.pug
 
 // Header
@@ -20,7 +21,11 @@ include ../abstracts/bemto/bemto.pug
             +e.INPUT.input(type='text', name='Быстрый поиск', placeholder='Быстрый поиск')
             img(src="img/search.png")
       +e.col-xs-12.col-xl-2
-            +e.A.btn(href="#") Отправить заявку
+        +e.A.btn(href="#") Отправить заявку
+        +e.overlay
+          +b.FORM.popup
+            +e.bgr
+            +form(application)
 +b.NAV.nav
   .container
     +e.hamburger
@@ -28,11 +33,11 @@ include ../abstracts/bemto/bemto.pug
         span
     +e.UL.list(id="nav__list")
       +e.LI.item
-        +e.A.link(href="#") Главная
+        +e.A.link(href="index.html") Главная
       +e.LI.item
         +e.A.link(href="#") О компании
       +e.LI.item
-        +e.A.link(href="#") Каталог
+        +e.A.link(href="catalog.html") Каталог
       +e.LI.item
         +e.A.link(href="#") Сервис и услуги
       +e.LI.item

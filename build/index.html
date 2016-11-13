@@ -71,6 +71,37 @@
           </div>
           <div class="header__col-xs-12 col-xl-2">
             <a class="header__btn" href="#">Отправить заявку</a>
+            <div class="header__overlay">
+              <form class="popup">
+                <div class="popup__bgr"></div>
+                <section class="form form--application">
+                  <h3 class="form__title"></h3>
+                  <p class="form__text">Отправить заявку</p>
+                  <form class="form__form" action="" method="" id="formApplication">
+                    <div class="form-group required has-error">
+                      <input class="form__input" type="text" name="Имя" placeholder="Имя*" />
+                      <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
+                    </div>
+                    <div class="form-group required has-success">
+                      <input class="form__input" type="tel" name="Телефон" placeholder="Телефон" />
+                      <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
+                    </div>
+                    <div class="form-group required">
+                      <input class="form__input" type="email" name="Email" placeholder="Еmail" />
+                      <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form__textarea" type="text" name="Текст" placeholder="Текст"></textarea>
+                      <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
+                    </div>
+                    <div class="form-group required">
+                      <button class="btn btn--form" type="submit">Отправить</button>
+                      <p class="help-block help-block-success">Ваша заявка отправлена</p>
+                    </div>
+                  </form>
+                </section>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -84,13 +115,13 @@
         </div>
         <ul class="nav__list" id="nav__list">
           <li class="nav__item">
-            <a class="nav__link" href="#">Главная</a>
+            <a class="nav__link" href="index.html">Главная</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#">О компании</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">Каталог</a>
+            <a class="nav__link" href="catalog.html">Каталог</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#">Сервис и услуги</a>

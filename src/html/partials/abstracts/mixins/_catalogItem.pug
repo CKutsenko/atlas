@@ -1,0 +1,24 @@
+mixin catalogItem(img, title, weight, carrier, oil, pressure, frequency, power)
+  +e.item
+    +e.A.img(href="card.html")
+      img(src= "img/" + img alt)
+    +e.inner
+      +e.A.name(href="#") #{title}
+    +e.P.wrapper
+      +e.SPAN.span Рабочий вес:
+      +e.SPAN.property #{weight}
+    +e.P.wrapper
+      +e.SPAN.span Класс носителя:
+      +e.SPAN.property #{carrier}
+    +e.P.wrapper
+      +e.SPAN.span Расход масла:
+      +e.SPAN.property #{oil}
+    +e.P.wrapper
+      +e.SPAN.span Раб.давление:
+      +e.SPAN.property #{pressure}
+    +e.P.wrapper
+      +e.SPAN.span Частота уд/мин:
+      +e.SPAN.property #{frequency}
+    +e.P.wrapper
+      +e.SPAN.span Вход. гидр. мощность:
+      +e.SPAN.property #{power}

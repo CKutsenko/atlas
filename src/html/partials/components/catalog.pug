@@ -1,0 +1,50 @@
+include ../abstracts/mixins/_catalogItem.pug
+include ../abstracts/bemto/bemto.pug
+
+//catalog
++b.SECTION.catalog
+  +b.breadcrumbs
+    +e.A.link(href="index.html") Главная
+    +e.A.link(href="catalog.html") Каталог
+    +e.P.text Навесное оборудование
+  +e.H1.block-title Навесное оборудование
+  .row
+    .col-xs-12.col-md-4
+      +catalogItem('catalog-item.jpg',
+      'Гидромолот SB 52',
+      '55 кг',
+      '0,7-1,1 т',
+      '12-27 л/мин',
+      '100-150 бар',
+      '750-1700',
+      '7 кВт')
+    .col-xs-12.col-md-4
+      +catalogItem('catalog-item.jpg',
+      'Гидромолот SB 52',
+      '55 кг',
+      '0,7-1,1 т',
+      '12-27 л/мин',
+      '100-150 бар',
+      '750-1700',
+      '7 кВт')
+    .col-xs-12.col-md-4
+      +catalogItem('catalog-item.jpg',
+      'Гидромолот SB 52',
+      '55 кг',
+      '0,7-1,1 т',
+      '12-27 л/мин',
+      '100-150 бар',
+      '750-1700',
+      '7 кВт')
+    .col-xs-12
+      +b.pagination
+        +e.A.link-prev(href="#")
+        +e.A.link--active(href="#")
+          p 1
+        +e.A.link(href="#")
+          p 2
+        +e.A.link(href="#")
+          p 3
+        +e.A.link(href="#")
+          p 4
+        +e.A.link-next(href="#")

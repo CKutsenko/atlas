@@ -1,0 +1,51 @@
+.pagination {
+  text-align: center;
+  position: relative;
+  margin-top: 30px;
+  a {
+    display: inline-block;
+  }
+  &__link-prev {
+    color: #000;
+    font-size: 16px;
+  }
+  &__link {
+    margin: 7px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $orange;
+    border-radius: 50%;
+    position: relative;
+    font-weight: 500;
+    p{
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -9px;
+    }
+    &--active {
+      background-color: $orange;
+      color: #fff;
+    }
+  }
+  &__link-prev {
+   width: 30px;
+    height: 30px;
+    &:before {
+      position: absolute;
+      content: '';
+      @include sprite($s-prev);
+      bottom: 50%;
+    }
+  }
+  &__link-next {
+   width: 30px;
+    height: 30px;
+    &:before {
+      position: absolute;
+      content: '';
+      @include sprite($s-next);
+      bottom: 50%;
+    }
+  }
+}

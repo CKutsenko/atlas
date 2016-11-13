@@ -10245,6 +10245,14 @@ toggler.onclick = function(e){
     }
   });
 
+    $('.promo-slider').slick({
+    infinite: true,
+    arrows: false,
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+
 
 $('.card__tabs-link a').on('click', function(e){
   e.preventDefault();
@@ -10265,75 +10273,51 @@ $('.card__tabs-link a').on('click', function(e){
   $(link_href).addClass('active');
 });
 
-
-
-// $('.aside__btn').on('click', function(){
-//   if( $(this).closest('.aside__link').is('.active') ){
-//     $(this)
-//     .closest('.aside__accordion')
-//     .find('.aside__item')
-//     .removeClass('aside--active');
-//   }
-//   else {
-//     $(this)
-//     .closest('.aside__btn')
-//     .find('.aside__item')
-//     .removeClass('aside--active');
-//     $(this).closest('.aside__accordion').addClass('active')
-//   }
-// });
-
-
-  /* галерея Gratitude */
-  $('.promo-slider').slick({
-    infinite: true,
-    arrows: false,
-    dots: true,
-    slidesToShow: 1,
-    slidesToScroll: 1
+  /* Модальное окно "Заказать звонок" */
+  $('.header__btn').click( function(event){ // лoвим клик пo ссылки с id="go"
+    event.preventDefault();
+    $('body').css({"overflow":"hidden"});// выключaем стaндaртную рoль элементa
+    $('.header__overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
+      function(){ // пoсле выпoлнения предъидущей aнимaции
+        $('.form')
+          .css('display', 'block') // убирaем у мoдaльнoгo oкнa display: none;
+          .animate({opacity: 1, top: '20%'}, 200); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
+    });
   });
-  /* Gratitude in the modal window */
-  $('.gratitude__link').click( function(e){
-    e.preventDefault();
-    $('body').css({"overflow":"hidden"});
-    $('.overlay').show();
-    $(this).closest('.gratitude__slide').find('.gratitude__modal').clone().appendTo($('.overlay'))
-    .show()
-    .animate({opacity: 1}, 200);
-  });
-  /* Close the modal window */
-  $('.overlay').click( function(){
+  /* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
+  $('.popup__bgr').click( function(){ // лoвим клик пo крестику или пoдлoжке
     $('body').css({"overflow":"auto"});
-    $(this).find('.gratitude__modal')
-      .animate({opacity: 0}, 200,
-        function(){
-          $(this).remove();
-          $('.overlay').fadeOut(400);
+    $('.form')
+      .animate({opacity: 0, top: '45%'}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
+        function(){ // пoсле aнимaции
+          $(this).css('display', 'none'); // делaем ему display: none;
+          $('.header__overlay').fadeOut(400); // скрывaем пoдлoжку
         }
       );
   });
 
-  /* Gratitude in the modal window */
-  $('.reviews__link').click( function(e){
-    e.preventDefault();
-    $('body').css({"overflow":"hidden"});
-    $('.overlay').show();
-    $(this).closest('.reviews__slide').find('.reviews__modal').clone().appendTo($('.overlay'))
-    .show()
-    .animate({opacity: 1}, 200);
+  /* Модальное окно "Заказать звонок" */
+  $('.card__btn').click( function(event){ // лoвим клик пo ссылки с id="go"
+    event.preventDefault();
+    $('body').css({"overflow":"hidden"});// выключaем стaндaртную рoль элементa
+    $('.card__overlay').fadeIn(400, // снaчaлa плaвнo пoкaзывaем темную пoдлoжку
+      function(){ // пoсле выпoлнения предъидущей aнимaции
+        $('.form')
+          .css('display', 'block') // убирaем у мoдaльнoгo oкнa display: none;
+          .animate({opacity: 1, top: '10%'}, 200); // плaвнo прибaвляем прoзрaчнoсть oднoвременнo сo съезжaнием вниз
+    });
   });
-  /* Close the modal window */
-  $('.overlay').click( function(){
+  /* Зaкрытие мoдaльнoгo oкнa, тут делaем тo же сaмoе нo в oбрaтнoм пoрядке */
+  $('.popup__bgr').click( function(){ // лoвим клик пo крестику или пoдлoжке
     $('body').css({"overflow":"auto"});
-    $(this).find('.reviews__modal')
-      .animate({opacity: 0}, 200,
-        function(){
-          $(this).remove();
-          $('.overlay').fadeOut(400);
+    $('.form')
+      .animate({opacity: 0, top: '45%'}, 200,  // плaвнo меняем прoзрaчнoсть нa 0 и oднoвременнo двигaем oкнo вверх
+        function(){ // пoсле aнимaции
+          $(this).css('display', 'none'); // делaем ему display: none;
+          $('.card__overlay').fadeOut(400); // скрывaем пoдлoжку
         }
       );
   });
-
 
 });
 

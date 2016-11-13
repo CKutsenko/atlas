@@ -71,6 +71,37 @@
           </div>
           <div class="header__col-xs-12 col-xl-2">
             <a class="header__btn" href="#">Отправить заявку</a>
+            <div class="header__overlay">
+              <form class="popup">
+                <div class="popup__bgr"></div>
+                <section class="form form--application">
+                  <h3 class="form__title"></h3>
+                  <p class="form__text">Отправить заявку</p>
+                  <form class="form__form" action="" method="" id="formApplication">
+                    <div class="form-group required has-error">
+                      <input class="form__input" type="text" name="Имя" placeholder="Имя*" />
+                      <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
+                    </div>
+                    <div class="form-group required has-success">
+                      <input class="form__input" type="tel" name="Телефон" placeholder="Телефон" />
+                      <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
+                    </div>
+                    <div class="form-group required">
+                      <input class="form__input" type="email" name="Email" placeholder="Еmail" />
+                      <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form__textarea" type="text" name="Текст" placeholder="Текст"></textarea>
+                      <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
+                    </div>
+                    <div class="form-group required">
+                      <button class="btn btn--form" type="submit">Отправить</button>
+                      <p class="help-block help-block-success">Ваша заявка отправлена</p>
+                    </div>
+                  </form>
+                </section>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -84,13 +115,13 @@
         </div>
         <ul class="nav__list" id="nav__list">
           <li class="nav__item">
-            <a class="nav__link" href="#">Главная</a>
+            <a class="nav__link" href="index.html">Главная</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#">О компании</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">Каталог</a>
+            <a class="nav__link" href="catalog.html">Каталог</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#">Сервис и услуги</a>
@@ -269,6 +300,77 @@
                     </p>
                     <p class="card__catalog">Есть в наличии</p>
                     <a class="card__btn" href="#">Купить</a>
+                    <div class="card__overlay">
+                      <form class="popup">
+                        <div class="popup__bgr"></div>
+                        <section class="form form--order">
+                          <h3 class="form__title"></h3>
+                          <p class="form__text">Заказ товара</p>
+                          <form class="form__form" action="" method="" id="formOrder">
+                            <div class="row">
+                              <div class="col-xs-12 col-md-6">
+                                <div class="form__card">
+                                  <div class="form__item">
+                                    <a class="form__img" href="card.html">
+                                      <img src="img/catalog-item.jpg" alt>
+                                    </a>
+                                    <div class="form__inner">
+                                      <a class="form__name" href="#">Гидромолот SB 52</a>
+                                    </div>
+                                    <p class="form__wrapper">
+                                      <span class="form__span">Рабочий вес:</span>
+                                      <span class="form__property">55 кг</span>
+                                    </p>
+                                    <p class="form__wrapper">
+                                      <span class="form__span">Класс носителя:</span>
+                                      <span class="form__property">0,7-1,1 т</span>
+                                    </p>
+                                    <p class="form__wrapper">
+                                      <span class="form__span">Расход масла:</span>
+                                      <span class="form__property">12-27 л/мин</span>
+                                    </p>
+                                    <p class="form__wrapper">
+                                      <span class="form__span">Раб.давление:</span>
+                                      <span class="form__property">100-150 бар</span>
+                                    </p>
+                                    <p class="form__wrapper">
+                                      <span class="form__span">Частота уд/мин:</span>
+                                      <span class="form__property">750-1700</span>
+                                    </p>
+                                    <p class="form__wrapper">
+                                      <span class="form__span">Вход. гидр. мощность:</span>
+                                      <span class="form__property">7 кВт</span>
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xs-12 col-md-6">
+                                <div class="form-group required has-error">
+                                  <input class="form__input" type="text" name="Имя" placeholder="Имя*" />
+                                  <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
+                                </div>
+                                <div class="form-group required has-success">
+                                  <input class="form__input" type="tel" name="Телефон" placeholder="Телефон" />
+                                  <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
+                                </div>
+                                <div class="form-group required">
+                                  <input class="form__input" type="email" name="Email" placeholder="Еmail" />
+                                  <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
+                                </div>
+                                <div class="form-group">
+                                  <textarea class="form__textarea" type="text" name="Текст" placeholder="Комментарий"></textarea>
+                                  <p class="help-block help-block-error">Ошибка заполнения поля формы</p>
+                                </div>
+                                <div class="form-group required">
+                                  <button class="btn btn--form" type="submit">Заказать</button>
+                                  <p class="help-block help-block-success">Ваша заявка отправлена</p>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </section>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </section>
