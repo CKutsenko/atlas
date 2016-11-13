@@ -10246,6 +10246,26 @@ toggler.onclick = function(e){
   });
 
 
+$('.card__tabs-link a').on('click', function(e){
+  e.preventDefault();
+
+  $(this)
+    .closest('.card__tabs-list')
+    .find('.card__tabs-link.active')
+    .removeClass('active');
+  $(this)
+   .closest('.card__tabs-link')
+   .addClass('active');
+
+  $(this)
+   .closest('.card__tabs')
+   .find('.card__tab-item.active')
+   .removeClass('active');
+  link_href = $(this).attr('href');
+  $(link_href).addClass('active');
+});
+
+
 
 // $('.aside__btn').on('click', function(){
 //   if( $(this).closest('.aside__link').is('.active') ){

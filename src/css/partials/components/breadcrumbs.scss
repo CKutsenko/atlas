@@ -1,0 +1,21 @@
+.breadcrumbs {
+  padding-top: 20px;
+  color: #696969;
+  &__link {
+    color: #696969;
+    display: inline-block;
+    text-decoration: underline;
+    position: relative;
+    padding-right: 20px;
+    &:after {
+      content: '>';
+      position: absolute;
+      right: 5px;
+    }
+  }
+  &__text {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+}
