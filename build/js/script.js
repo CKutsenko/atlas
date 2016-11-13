@@ -10227,15 +10227,41 @@ window.slick =              require('./vendor/bower/slick');
 jQuery(document).ready(function($){
 
   /* Hamburger */
-  $('.hamburger').click(function(e){
+var toggler = document.getElementById('hamburger');
+toggler.onclick = function(e){
+  e.preventDefault();
+  toggler.classList.toggle('hamburger--close');
+  document.getElementById('nav__list').classList.toggle('nav__list--visible');
+}
+
+
+  $('.aside__btn').click(function(e){
     e.preventDefault();
-    $('.nav__list-wrapper').toggle();
+    if($(this).next('.aside__accordion').is(":visible")) {
+      $(this).next('.aside__accordion').hide().addClass('active');
+    } else {
+      $(this).closest('.aside').find('.aside__accordion').hide();
+      $(this).next('.aside__accordion').show().removeClass('active').addClass('none');
+    }
   });
 
-  /* City list */
-  $('.city__name').click(function(){
-    $('.city__dropdown').toggle();
-  });
+
+
+// $('.aside__btn').on('click', function(){
+//   if( $(this).closest('.aside__link').is('.active') ){
+//     $(this)
+//     .closest('.aside__accordion')
+//     .find('.aside__item')
+//     .removeClass('aside--active');
+//   }
+//   else {
+//     $(this)
+//     .closest('.aside__btn')
+//     .find('.aside__item')
+//     .removeClass('aside--active');
+//     $(this).closest('.aside__accordion').addClass('active')
+//   }
+// });
 
 
   /* галерея Gratitude */
@@ -10244,8 +10270,7 @@ jQuery(document).ready(function($){
     arrows: false,
     dots: true,
     slidesToShow: 1,
-    slidesToScroll: 1,
-    centerMode: true
+    slidesToScroll: 1
   });
   /* Gratitude in the modal window */
   $('.gratitude__link').click( function(e){

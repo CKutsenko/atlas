@@ -46,7 +46,7 @@
     <header class="header">
       <div class="container">
         <div class="row">
-          <div class="header__col-xs-12 col-md-3">
+          <div class="header__col-xs-12 col-xl-3">
             <!-- Logo-->
             <div class="header__logo">
               <a class="header__img" href="index.html">
@@ -54,14 +54,14 @@
               </a>
             </div>
           </div>
-          <div class="header__col-xs-12 col-md-4">
+          <div class="header__col-xs-12 col-xl-4">
             <div class="header__contact">
               <a class="header__phone" href="tel:84957446858">тел. 8 (495) 744-68-58</a>
               <p class="header__adress">Московская область, г. Жуковский,
                 <br>ул. Амет-хан Султана, 15/2, корпус 2</p>
             </div>
           </div>
-          <div class="header__col-xs-12 col-md-3">
+          <div class="header__col-xs-12 col-xl-3">
             <div class="header__search-wrapper">
               <div class="header__form">
                 <input class="header__input" type="text" name="Быстрый поиск" placeholder="Быстрый поиск" />
@@ -69,7 +69,7 @@
               </div>
             </div>
           </div>
-          <div class="header__col-xs-12 col-md-2">
+          <div class="header__col-xs-12 col-xl-2">
             <a class="header__btn" href="#">Отправить заявку</a>
           </div>
         </div>
@@ -78,9 +78,11 @@
     <nav class="nav">
       <div class="container">
         <div class="nav__hamburger">
-          <a class="hamburger" href="#"></a>
+          <a class="hamburger" href="#" id="hamburger">
+            <span></span>
+          </a>
         </div>
-        <ul class="nav__list">
+        <ul class="nav__list" id="nav__list">
           <li class="nav__item">
             <a class="nav__link" href="#">Главная</a>
           </li>
@@ -103,7 +105,7 @@
             <a class="nav__link" href="#">Новости</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">Контакты</a>
+            <a class="nav__link" href="contact.html">Контакты</a>
           </li>
           <li class="nav__item">
             <a class="nav__link" href="#">FAQ</a>
@@ -113,7 +115,7 @@
     </nav>
     <main>
       <!--Promo slider-->
-      <div class="promo-slider">
+      <div class="promo-slider container">
         <div class="promo-slider__wrapper">
           <div class="promo-slider__img">
             <img src="img/slider.jpg">
@@ -187,14 +189,14 @@
       <!--Promo-->
       <section class="promo">
         <div class="container">
-          <div class="row">
+          <div class="promo__title-wrapper">
             <p class="promo__title">сервисные услуги</p>
           </div>
           <div class="row">
             <div class="col-xs-12 col-md-3">
               <div class="promo__wrapper">
                 <div class="promo__img">
-                  <img href="img/generator.jpg">
+                  <img src="img/generator.jpg" alt="generator" title="generator">
                 </div>
                 <div class="promo__subtitle">Генераторы</div>
               </div>
@@ -202,7 +204,7 @@
             <div class="col-xs-12 col-md-3">
               <div class="promo__wrapper">
                 <div class="promo__img">
-                  <img href="img/compressor.jpg">
+                  <img src="img/compressor.jpg" alt="compressor" title="compressor">
                 </div>
                 <div class="promo__subtitle">Компрессоры передвижные</div>
               </div>
@@ -210,7 +212,7 @@
             <div class="col-xs-12 col-md-3">
               <div class="promo__wrapper">
                 <div class="promo__img">
-                  <img href="img/attachments.jpg">
+                  <img src="img/attachments.jpg" alt="attachments" title="attachments">
                 </div>
                 <div class="promo__subtitle">Навесное оборудование</div>
               </div>
@@ -218,9 +220,18 @@
             <div class="col-xs-12 col-md-3">
               <div class="promo__wrapper">
                 <div class="promo__img">
-                  <img href="img/equipment.jpg">
+                  <img src="img/equipment.jpg" alt="equipment" title="equipment">
                 </div>
                 <div class="promo__subtitle">Насосное оборудованиe</div>
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <div class="promo__text-wrapper">
+                <p class="promo__text">Строительный сегмент в нашей стране быстро развивается во всех направлениях. Хорошего профессионального инструмента и оборудования становится все больше. Наша компания старается быть в курсе всех новинок зарубежных производителей, для
+                  последующей презентации клиенту. Первочередная задача Векпром компании это в максимально сжатые сроки удовлетворить потребности строителя. Это может быть передвижной дизельный компрессор, дизельный генератор, затирочная машина или отбойные
+                  молотки.</p>
+                <p class="promo__text">Промышленная группа Векпром осуществляет свою деятельность более 10 лет и зарекомендовала себя как надежный поставщик. Мы является официальным дилером Atlas Copco на территории Российской Федерации. Ежегодно наши специалисты проходят обучение
+                  за границей с целью повышения квалификации.</p>
               </div>
             </div>
           </div>
@@ -231,7 +242,7 @@
     <footer class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-md-2">
+          <div class="col-xs-12 col-xl-2">
             <ul class="footer__list">
               <li class="footer__item">
                 <a class="footer__link" href="#">Главная</a>
@@ -244,7 +255,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-xs-12 col-md-2">
+          <div class="col-xs-12 col-xl-2">
             <ul class="footer__list">
               <li class="footer__item">
                 <a class="footer__link" href="#">Сервис и услуги</a>
@@ -257,7 +268,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-xs-12 col-md-2">
+          <div class="col-xs-12 col-xl-2">
             <ul class="footer__list">
               <li class="footer__item">
                 <a class="footer__link" href="#">Новости</a>
@@ -270,7 +281,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-xs-12 col-md-6">
+          <div class="col-xs-12 col-xl-6">
             <div class="footer__contact">
               <a class="footer__phone" href="tel:84957446858">тел. 8 (495) 744-68-58</a>
               <p class="footer__adress">Московская область, г. Жуковский,

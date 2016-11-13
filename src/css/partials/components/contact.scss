@@ -1,0 +1,76 @@
+.contact {
+  margin-top: 20px;
+  &__map {
+    width: 65%;
+    iframe {
+      width: 100%;
+      height: 360px;
+    }
+  @include mq($from:xs, $until:xl){
+    width: 100%;
+    iframe {
+      padding-left: 15px;
+      padding-right: 15px;
+      height: 240px;
+      padding-bottom: 20px;
+    }
+    }
+  }
+  &__info {
+    width: 35%;
+    padding: 0 15px;
+    color: #696969;
+  @include mq($from:xs, $until:xl){
+    width: 100%;
+    }
+  }
+  &__company {
+    font-weight: bold;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  &__adress,
+  &__phone-inner {
+    padding-top: 20px;
+  }
+  &__tel {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  &__phone {
+    display: block;
+    padding-top: 2px;
+    color: #696969;
+  }
+  &__mail {
+    display: block;
+    margin-top: 25px;
+    color: $orange;
+  }
+  &__title {
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-top: 15px;
+    margin-bottom: 20px;
+    color: #696969;
+    font-weight: 600;
+  }
+  &__text {
+    padding-top: 20px;
+    text-align: left;
+    line-height: 24px;
+    color: #696969;
+  }
+}
+
+.row--contact {
+  @include mq($from:xs, $until:xl){
+    flex-direction: column;
+    .second {
+      order:2;
+    }
+    .first {
+      order: 1;
+    }
+  }
+}

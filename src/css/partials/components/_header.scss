@@ -1,5 +1,10 @@
 .header {
   padding: 35px 0 30px;
+  .row {
+    @include mq($from:xs, $until:xl){
+      flex-direction: column;
+    }
+  }
   &__logo {
     width: 220px;
     height: 50px;
@@ -25,6 +30,9 @@
   &__btn-wrapper {
     flex: 0 0 50%;
     align-items: flex-end;
+    @include mq($from:xs, $until:xl){
+      padding-top: 10px;
+    }
   }
   &__btn-wrapper {
     text-align: right;
@@ -64,6 +72,9 @@
     &:hover {
       background-color: #c4911a;
     }
+    @include mq($from:xs, $until:xl){
+      margin-top: 10px;
+    }
   }
 }
 
@@ -74,22 +85,122 @@
     text-transform: uppercase;
     padding: 0;
     margin-left: 0px;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
     display: flex;
-    background-color: #65656e;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
+    background-color: #686872;
+    justify-content: space-around;
+    @include mq($from:xs, $until:xl){
+      flex-direction: column;
+      display: none;
+      position: absolute;
+      top: 75px;
+      width: 90%;
+      z-index: 1000;
+      flex: 0 0 auto;
+    }
+    &--visible {
+      display: flex!important;
+    }
   }
   &__item {
+   text-align: center;
+   flex: 1 0 auto;
+   border-right: 1px solid #63636a;
+   white-space: nowrap;
+  transition: .3s;
+    &:hover {
+      background-color: #77777f;
+    }
+    &:last-child {
+      border: none;
+    }
+    @include mq($from:xs, $until:xl){
+      display: inline-block;
+    }
   }
   &__link {
     color: #fff;
     padding: 25px 0;
     display: block;
-    border-right: 1px solid #fff;
+    border-right: 1px solid #8d8d94;
+    @include mq($from:xs, $until:xl){
+      padding: 15px 0;
+      border-bottom: 1px solid #8d8d94;
+    }
+  }
+  &__hamburger {
+    display: none;
+    @include mq($from:xs, $until:xl){
+      display: block;
+    }
+  }
+}
+
+ .hamburger {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 19px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  width: 3em;
+  height: 3em;
+  line-height: 3em;
+  user-select: none;
+    @include mq($from:xs, $until:xl){
+      display: block;
+    }
+
+  > span {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 100%;
+    height: .3rem;
+    background: #626262;
+    border-radius: .2rem;
+    position: relative;
+    transition: background .3s .5s;
+
+    &:before,
+    &:after {
+      width: 100%;
+      height: .3rem;
+      background: #626262;
+      border-radius: .2rem;
+      position: absolute;
+      left: 0;
+      content: '';
+      transform-origin: 50% 50%;
+      transition: top .3s .6s, transform .3s;
+    }
+
+    &:before {
+      top: 1rem;
+    }
+
+    &:after {
+      top: -1rem;
+    }
+  }
+
+  &--close {
+    > span {
+      transition: background .3s 0;
+      background: transparent;
+
+      &:before,
+      &:after {
+        transition: top .3s, transform .3s .5s;
+        top: 0;
+      }
+
+      &:before {
+        transform: rotate3d(0, 0, 1, 45deg);
+      }
+
+      &:after {
+        transform: rotate3d(0, 0, 1, -45deg);
+      }
+    }
   }
 }

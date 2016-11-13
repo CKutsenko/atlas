@@ -4,28 +4,29 @@ include ../abstracts/bemto/bemto.pug
 +b.HEADER.header
   .container
     .row
-      +e.col-xs-12.col-md-3
+      +e.col-xs-12.col-xl-3
         // Logo
         +e.logo
           +e.A.img(href="index.html")
             img(src="img/logotype.png" alt="logo" title="logo")
-      +e.col-xs-12.col-md-4
+      +e.col-xs-12.col-xl-4
         +e.contact
           +e.A.phone(href="tel:84957446858") тел. 8 (495) 744-68-58
           +e.P.adress Московская область, г. Жуковский,
             <br>ул. Амет-хан Султана, 15/2, корпус 2
-      +e.col-xs-12.col-md-3
+      +e.col-xs-12.col-xl-3
         +e.search-wrapper
           +e.form
             +e.INPUT.input(type='text', name='Быстрый поиск', placeholder='Быстрый поиск')
             img(src="img/search.png")
-      +e.col-xs-12.col-md-2
+      +e.col-xs-12.col-xl-2
             +e.A.btn(href="#") Отправить заявку
 +b.NAV.nav
   .container
     +e.hamburger
-      +b.A.hamburger(href="#")
-    +e.UL.list
+      +b.A.hamburger(href="#" id="hamburger")
+        span
+    +e.UL.list(id="nav__list")
       +e.LI.item
         +e.A.link(href="#") Главная
       +e.LI.item
@@ -41,7 +42,7 @@ include ../abstracts/bemto/bemto.pug
       +e.LI.item
         +e.A.link(href="#") Новости
       +e.LI.item
-        +e.A.link(href="#") Контакты
+        +e.A.link(href="contact.html") Контакты
       +e.LI.item
         +e.A.link(href="#") FAQ
 
